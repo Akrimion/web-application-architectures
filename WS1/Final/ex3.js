@@ -45,7 +45,7 @@ var rental={
     {
       "id": "3-sa-92",
       "driver": {
-        "firstName": " Sami",
+        "firstName": "Sami",
         "lastName": "Ameziane"
       },
       "carId": "p-boxster",
@@ -56,32 +56,33 @@ var rental={
   ]
 };
 var liste ={
-"rentals": [
-{
-"id": "Paul-Bismuth",
-	  
-},
-{
-"id": "Rebecca-Solanas",
-},
-{
-"id": "Sami-Ameziane",
-
-}
-]
+  "rentals": [
+    {
+      "id": "Paul-Bismuth"
+    
+    },
+    {
+      "id": "Rebecca-Solanas"
+      
+    },
+    {
+      "id": "Sami-Ameziane"
+      
+    }
+  ]
 };
 
-document.write("<br/> rentals with decrasing price: <br/>");
+document.write("<br/> rentals Commission: <br/>");
 for(var k=0;k<=2;k++){
-	document.write(liste.rentals[k].id +"<br/>Price:" + prixWithDecrasing(liste.rentals[k])+ "<br/>");
+	document.write("<br/>"+liste.rentals[k].id +"<br/>  Price:" + prixCom(liste.rentals[k]).price+ "<br/>Commission:"+prixCom(liste.rentals[k]).commission+"<br/>   Insurance:"+prixCom(liste.rentals[k]).insurance+"<br/>   Assistance:"+prixCom(liste.rentals[k]).assistance+"<br/>   Drivy:"+prixCom(liste.rentals[k]).drivy);
 }
 
 
 
 
 
-function prixWithDecrasing(obj){
-	
+function prixCom(obj){
+	var Price={};
 	for(var i=0;i<=2; i++){
 		var drive = rental.rentals[i].driver.firstName +"-"+rental.rentals[i].driver.lastName;
 		if(drive==obj.id)
@@ -91,31 +92,21 @@ function prixWithDecrasing(obj){
 				{
 					
 					var date= Date.parse(rental.rentals[i].returnDate)- Date.parse(rental.rentals[i].pickupDate);
-					var Day=date/1000/60/60/24+1;
-					var PriceTemp = rental.cars[j].pricePerDay*Day;
+					var duree=date/1000/60/60/24+1;
+					
+					var PriceTemp = rental.cars[j].pricePerDay*duree;
 					var PriceKm = rental.rentals[i].distance*rental.cars[j].pricePerKm;
-					var Price= PriceTemp + PriceKm;
-					if(Day<1)
-					{
-						var pay= Price;
-					}
-					else if(Day<4)
-					{
-						var pay= Price-(Price*10/100);
-					}
-					else if(Day<10)
-					{
-						var pay= Price-(Price*30/100);
-					}
-					else
-					{
-						var pay= Price-(Price*50/100);
-					}
+					var cost= PriceTemp + PriceKm;
+					Price.price=cost;
+					var commission= cost*30/100;
+					Price.commission=commission;
+					Price.insurance=commission/2;
+					Price.assistance=duree;
+					Price.drivy=(commission/2)-duree;
+					
 				}
 			}
 		}
 	}
-	var price=pay;
-	
-	return price;
+	return Price;
 }

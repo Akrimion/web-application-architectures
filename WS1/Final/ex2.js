@@ -45,7 +45,7 @@ var rental={
     {
       "id": "3-sa-92",
       "driver": {
-        "firstName": " Sami",
+        "firstName": "Sami",
         "lastName": "Ameziane"
       },
       "carId": "p-boxster",
@@ -73,7 +73,7 @@ var liste ={
 
 document.write("<br/> rentals with decrasing price: <br/>");
 for(var k=0;k<=2;k++){
-	document.write(liste.rentals[k].id +"<br/>Price:" + prixWithDecrasing(liste.rentals[k])+ "<br/>");
+	document.write(liste.rentals[k].id +"<br/>  Price:" + prixWithDecrasing(liste.rentals[k])+ "<br/>");
 }
 
 
