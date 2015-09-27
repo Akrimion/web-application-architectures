@@ -72,9 +72,9 @@ var liste ={
   ]
 };
 
-document.write("<br/> rentals Commission: <br/>");
+document.write("<h3>Rentals with commission: </h3>");
 for(var k=0;k<=2;k++){
-	document.write("<br/>"+liste.rentals[k].id +"<br/>  Price:" + prixCom(liste.rentals[k]).price+ "<br/>Commission:"+prixCom(liste.rentals[k]).commission+"<br/>   Insurance:"+prixCom(liste.rentals[k]).insurance+"<br/>   Assistance:"+prixCom(liste.rentals[k]).assistance+"<br/>   Drivy:"+prixCom(liste.rentals[k]).drivy);
+	document.write("<div class=\"col-lg-4\"><h3>"+liste.rentals[k].id +"</h3><h4>Price: " + prixCom(liste.rentals[k]).price+ "€<br/>Commission: "+prixCom(liste.rentals[k]).commission+"€<br/>Insurance: "+prixCom(liste.rentals[k]).insurance+"€<br/>Assistance: "+prixCom(liste.rentals[k]).assistance+"€<br/>Drivy: "+prixCom(liste.rentals[k]).drivy+"€</h4></div>");
 }
 
 

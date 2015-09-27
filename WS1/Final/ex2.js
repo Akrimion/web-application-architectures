@@ -71,9 +71,9 @@ var liste ={
 ]
 };
 
-document.write("<br/> rentals with decrasing price: <br/>");
+document.write("<h3> Rentals with decrasing price:</h3>");
 for(var k=0;k<=2;k++){
-	document.write(liste.rentals[k].id +"<br/>  Price:" + prixWithDecrasing(liste.rentals[k])+ "<br/>");
+	document.write("<div class=\"col-lg-4\"><h4>"+liste.rentals[k].id +"<br/>Price: " + prixWithDecrasing(liste.rentals[k])+ "€</h4></div>");
 }
 
 
