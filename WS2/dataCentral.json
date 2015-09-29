@@ -1,0 +1,13 @@
+{
+	"title": "Data La Central",
+	"type": "object",
+  "cote": {}
+    {
+      "marque": {"type":"string"},
+      "modele": {"type":"string"},
+      "millesime": {"type":"integer"},
+    }
+  },
+  "required": ["marque", "modele", "millesime"]
+}
+

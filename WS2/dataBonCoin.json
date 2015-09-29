@@ -1,0 +1,27 @@
+{
+	"title": "Data Le bon Coin",
+	"type": "object",
+  "localisation": {}
+    {
+      "region": {"type":"string"},
+      "departement": {"type":"string"},
+      "codePosal": {"type":"integer"},
+      "adresse": {"type":"integer"}
+    }
+  },
+  "annonce": {}
+    {
+      "titre": {"type":"string"},
+      "marque": {"type":"string"},
+      "modele": {"type":"string"},
+      "anneeModele": {"type":"integer"},
+      "kilometrage": {"type":"integer"},
+      "carburant": {"type":"string"},
+	  "boiteDeVitesse": {"type":"string"},
+	  "text": {"type":"string"},
+	  "prix": {"type":"integer"}
+    }
+  },
+  "required": ["marque", "modele", "anneeModele"]
+}
+

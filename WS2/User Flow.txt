@@ -1,0 +1,12 @@
+connection sur la webapp
+  -entrer url
+
+LeBonCoin.js
+-recup de la page via l'url
+-traitement des info pour recup Marque modelle et année
+-envoie a LaCentrale.js
+
+LaCentrale.js
+-recup des infos
+-ajout des données dans la page (ou via requette)
+-retour de la liste vers la webapp

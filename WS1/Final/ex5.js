@@ -70,7 +70,7 @@ var liste ={
 
 document.write("<h3>Debit/Credit:</h3>");
 for(var k=0;k<=2;k++){
-	document.write("<div class=\"col-lg-4\"><h3>"+liste.rentals[k].id +" : "+prixFin(liste.rentals[k]).driver.firstName+" "+prixFin(liste.rentals[k]).driver.lastName+"</h3><h4>driver pay: "+prixFin(liste.rentals[k]).full+"€<br/>owner recive: "+prixFin(liste.rentals[k]).owner+"€<br/>insurance recive: "+prixFin(liste.rentals[k]).insurance+"€<br/>assistance recive: "+prixFin(liste.rentals[k]).assistance+"€<br/>Drivy recive: "+prixFin(liste.rentals[k]).drivy+"€</h4></div>");
+	document.write("<tr><td>"+liste.rentals[k].id +"</td><td>"+prixFin(liste.rentals[k]).driver.firstName+" "+prixFin(liste.rentals[k]).driver.lastName+"</td><td>"+prixFin(liste.rentals[k]).full+"€</td><td>"+prixFin(liste.rentals[k]).owner+"€</td><td>"+prixFin(liste.rentals[k]).insurance+"€</td><td>"+prixFin(liste.rentals[k]).assistance+"€</td><td>"+prixFin(liste.rentals[k]).drivy+"€</td></tr>");
 }
 
 
